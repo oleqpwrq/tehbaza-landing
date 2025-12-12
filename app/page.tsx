@@ -145,9 +145,18 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
     <div className="min-h-screen bg-neutral-900 text-slate-50">
       {/* Шапка без меню */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-        <div className="relative mx-auto flex max-w-6xl items-center justify-end px-4 py-2">
-          {/* Слева — телефон (на десктопе) */}
-          <div className="absolute left-4 hidden text-xs leading-tight sm:block">
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-2">
+          {/* Логотип слева на мобильной версии */}
+          <div className="flex items-center sm:hidden">
+            <img
+              src={resolvedLogo}
+              alt={logoAlt ?? "Логотип компании"}
+              className="h-10 w-auto object-contain"
+            />
+          </div>
+
+          {/* Телефон слева на десктопе */}
+          <div className="hidden text-xs leading-tight sm:block">
             <a
               href="tel:+78000000000"
               className="font-semibold text-slate-100 hover:text-slate-50"
@@ -157,9 +166,9 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
             <div className="text-[11px] text-slate-400">Звонок по РФ бесплатный</div>
           </div>
 
-          {/* По центру — только логотип, по высоте почти как хедер */}
-          <div className="pointer-events-none absolute inset-x-0 flex justify-center">
-            <div className="pointer-events-auto flex h-30 sm:h-40 items-center justify-center">
+          {/* Центрированный логотип только на десктопе */}
+          <div className="pointer-events-none absolute inset-x-0 hidden justify-center sm:flex">
+            <div className="pointer-events-auto flex h-14 items-center justify-center">
               <img
                 src={resolvedLogo}
                 alt={logoAlt ?? "Логотип компании"}
@@ -168,7 +177,7 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
             </div>
           </div>
 
-          {/* Справа — кнопка звонка */}
+          {/* Кнопка звонка справа (всегда видна) */}
           <button
             type="button"
             onClick={() => openModal("Заказать звонок")}
