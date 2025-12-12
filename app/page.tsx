@@ -144,16 +144,21 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
   return (
     <div className="min-h-screen bg-neutral-900 text-slate-50">
       {/* Шапка без меню */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-2">
-          {/* Логотип слева на мобильной версии */}
-          <div className="flex items-center sm:hidden">
-            <img
-              src={resolvedLogo}
-              alt={logoAlt ?? "Логотип компании"}
-              className="h-10 w-auto object-contain"
-            />
-          </div>
+     <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+  <div className="relative mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+          {/* Логотип слева на мобильной версии (большой, но без увеличения высоты хедера) */}
+<div className="flex items-center sm:hidden">
+  {/* Логотип слева на мобильной версии: крупный и всегда по центру по высоте */}
+<div className="relative flex h-full w-24 items-center sm:hidden">
+  <img
+    src={resolvedLogo}
+    alt={logoAlt ?? "Логотип компании"}
+    className="absolute left-0 top-1/2 h-30 w-auto -translate-y-1/2 object-contain"
+  />
+</div>
+</div>
+
+
 
           {/* Телефон слева на десктопе */}
           <div className="hidden text-xs leading-tight sm:block">
@@ -168,7 +173,7 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
 
           {/* Центрированный логотип только на десктопе */}
           <div className="pointer-events-none absolute inset-x-0 hidden justify-center sm:flex">
-            <div className="pointer-events-auto flex h-14 items-center justify-center">
+            <div className="pointer-events-auto flex h-40 items-center justify-center">
               <img
                 src={resolvedLogo}
                 alt={logoAlt ?? "Логотип компании"}
