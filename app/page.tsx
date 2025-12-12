@@ -600,7 +600,7 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
         <div className="absolute inset-0 bg-neutral-950/90" />
 
         <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 sm:flex-row">
-          <div>© {new Date().getFullYear()} Ваша компания. Все права защищены.</div>
+          <div>© {new Date().getFullYear()} Manitou. Все права защищены.</div>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="text-slate-300 hover:text-slate-50">
               Политика конфиденциальности
