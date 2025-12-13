@@ -32,7 +32,7 @@ const MODELS: Model[] = [
     speed: "Мощность двигателя (kW) 70 kW",
   },
   {
-    name: "Телескопический погрузчик MRT-X 2570",
+    name: "Полноповоротный телескопический погрузчик MRT-X 2570",
     imageSrc: "/images/models/tb-530.jpg",
     imageAlt: "Телескопический погрузчик MRT-X 2570",
     load: "Номинальная грузоподъемность 7000 kg",
@@ -40,7 +40,7 @@ const MODELS: Model[] = [
     speed: "Мощность двигателя (kW) 127 kW",
   },
   {
-    name: "Телескопический погрузчик MRT-X 3570",
+    name: "Полноповоротный телескопический погрузчик MRT-X 3570",
     imageSrc: "/images/models/tb-570.jpg",
     imageAlt: "Телескопический погрузчик MRT-X 3570",
     load: "Номинальная грузоподъемность 7000 kg",
@@ -237,12 +237,12 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
               <div className="grid gap-4 text-xs text-slate-100 sm:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-neutral-900/70 p-4">
                   <div className="text-2xl font-semibold" style={{ color: accent }}>
-                    30
+                    В наличии
                   </div>
                   <div className="mt-1 text-[11px] uppercase tracking-wide text-slate-300">
-                    дней под заказ с завода
+                    и под заказ
                   </div>
-                </div>
+                 </div>
                 <div className="rounded-2xl border border-white/10 bg-neutral-900/70 p-4">
                   <div className="text-2xl font-semibold" style={{ color: accent }}>
                     24/7
@@ -487,8 +487,7 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
                 </div>
                 <div className="mt-2 space-y-1 text-sm">
                   <div>Телефон: 8 (800) 000-00-00</div>
-                  <div>Email: info@company.ru</div>
-                  <div>WhatsApp / Telegram: по запросу</div>
+                  <div>Email: info@manitou-russia.ru </div>
                 </div>
               </div>
               <div>
@@ -496,7 +495,7 @@ export default function Landing({ logoSrc, logoAlt }: LandingProps) {
                   Адрес офиса
                 </div>
                 <p className="mt-2 text-sm text-slate-200">
-                  РФ, г. Екатеринбург, ул. Примерная, д. 10, офис 5
+                  г. Москва
                 </p>
                 <p className="mt-1 text-xs text-slate-500">
                   Поставки и сервис по всей территории России.
